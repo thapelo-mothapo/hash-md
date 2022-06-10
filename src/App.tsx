@@ -15,30 +15,29 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
+import Frame from "./assets/Frame.svg";
+import Md from "./assets/MD.svg";
+
 export const App = () => {
   return (
     <ChakraProvider theme={theme}>
-      <SimpleGrid columns={2} spacing={10}>
+      <SimpleGrid columns={2}>
         <Flex
           minH={"100vh"}
           align={"center"}
-          justify={""}
+          justify={"center"}
           bg={useColorModeValue("gray.50", "gray.800")}
         >
-          <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
+          <Stack spacing={16} mx={"auto"} maxW={"lg"} py={12} px={6}>
             <Stack align={"center"}>
+              <img src={Frame} alt="" />
+              <img src={Md} alt="" />
               <Heading fontSize={"3xl"}>Welcome Back</Heading>
             </Stack>
-            <Box
-              rounded={"lg"}
-              bg={useColorModeValue("white", "gray.700")}
-              boxShadow={"lg"}
-              p={8}
-              marginTop={5}
-            >
+            <Box p={8}>
               <Stack spacing={4}>
                 <FormControl id="email">
-                  <FormLabel>Email address</FormLabel>
+                  <FormLabel>Email</FormLabel>
                   <Input type="email" />
                 </FormControl>
                 <FormControl id="password">
@@ -68,12 +67,7 @@ export const App = () => {
             </Box>
           </Stack>
         </Flex>
-        <Flex
-          minH={"100vh"}
-          align={"center"}
-          justify={""}
-          bg={useColorModeValue("gray.50", "gray.800")}
-        >
+        <Flex minH={"100vh"} align={"center"} justify={"center"} bg="teal">
           Image here
         </Flex>
       </SimpleGrid>
